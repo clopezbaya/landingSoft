@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovexo Labs | Desarrollo de Software a Medida</title>
+    <meta name="description" content="Soluciones web a medida adaptadas a tus procesos y necesidades. Calidad, honestidad y experiencia técnica.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header y Navegación -->
+    <header class="main-header">
+        <nav class="container">
+            <a href="#" class="logo">
+                <img src="logo.svg" alt="Innovexo Labs Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#portfolio">Portafolio</a></li>
+                <li><a href="#about">Sobre Mí</a></li>
+                <li><a href="#contact" class="cta-button nav-cta">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-content">
+                <h1>Software a Medida que Impulsa tu Negocio</h1>
+                <p class="subtitle">Construimos aplicaciones web robustas, escalables y seguras, diseñadas para optimizar tus operaciones y darte una ventaja competitiva real.</p>
+                <a href="#contact" class="cta-button">Hablemos de tu proyecto</a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <h2>Un Socio Tecnológico para cada Etapa</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>Desarrollo de Software a Medida</h3>
+                        <p>Diseñamos y construimos software a medida, desde MVPs hasta plataformas empresariales, alineando arquitectura, rendimiento y experiencia de usuario desde el primer día. Nuestro enfoque prioriza código mantenible, <strong>escalabilidad real</strong> y decisiones técnicas que soporten el crecimiento de tu negocio a largo plazo.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Automatización y Calidad de Software (QA)</h3>
+                        <p>Integramos la calidad como parte del proceso, no como una etapa final. Implementamos <strong>pruebas automatizadas</strong>, validaciones continuas y buenas prácticas de QA para reducir riesgos, prevenir errores críticos y asegurar un software confiable en <strong>producción</strong> desde la primera entrega.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Integración de APIs y Sistemas</h3>
+                        <p>Diseñamos e integramos APIs y sistemas distribuidos para conectar tus plataformas existentes —CRMs, ERPs, pasarelas de pago y servicios externos— en un <strong>ecosistema coherente</strong>, seguro y automatizado. Eliminamos fricción operativa y convertimos los datos en un activo estratégico.</p>
+                    </div>
+                </div>
+                <div class="support-mention">
+                    <p>Nuestra relación no termina con la entrega. Ofrecemos un <strong>partnership de soporte y mantenimiento</strong> para asegurar la evolución y el rendimiento continuo de tu aplicación.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio-section">
+            <div class="container">
+                <h2>Proyectos Destacados</h2>
+                <div class="portfolio-grid">
+
+                    <div class="portfolio-card">
+                        <figure class="portfolio-image">
+                            <img src="assets/dashboard.png" alt="Mockup de un dashboard de analíticas de negocio">
+                        </figure>
+                        <div class="portfolio-content">
+                            <h3>Dashboard de Analíticas para SaaS</h3>
+                            <p><strong>Problema:</strong> Un cliente SaaS necesitaba ofrecer a sus usuarios un panel de control intuitivo y rápido para visualizar métricas de negocio complejas en tiempo real.</p>
+                            <p><strong>Solución:</strong> Diseñamos y desarrollamos una Single-Page Application (SPA) con un backend optimizado para consultas de alto rendimiento y una interfaz interactiva con gráficos dinámicos.</p>
+                            <div class="technologies"><span>React</span><span>Node.js</span><span>PostgreSQL</span><span>Chart.js</span></div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card">
+                        <figure class="portfolio-image">
+                            <img src="assets/filters.png" alt="Mockup de un sistema con filtros y gestión de datos">
+                        </figure>
+                        <div class="portfolio-content">
+                            <h3>Sistemas CRUD y Gestión de Datos</h3>
+                            <p><strong>Problema:</strong> Una empresa requería una herramienta interna robusta para gestionar un gran volumen de registros, con capacidades avanzadas de búsqueda, filtrado y edición de datos.</p>
+                            <p><strong>Solución:</strong> Desarrollamos una aplicación web segura con un panel de control que permite operaciones CRUD (Crear, Leer, Actualizar, Borrar), incluyendo filtros dinámicos y exportación de datos.</p>
+                            <div class="technologies"><span>Vue.js</span><span>Laravel</span><span>MySQL</span><span>Docker</span></div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card">
+                        <figure class="portfolio-image">
+                            <img src="assets/login.png" alt="Mockup de una pantalla de login segura">
+                        </figure>
+                        <div class="portfolio-content">
+                            <h3>Módulo de Seguridad y Acceso al Sistema</h3>
+                            <p><strong>Problema:</strong> Una aplicación de negocio carecía de un sistema de autenticación moderno, lo que exponía datos sensibles y ofrecía una mala experiencia de usuario.</p>
+                            <p><strong>Solución:</strong> Implementamos un módulo de autenticación desde cero, utilizando JSON Web Tokens (JWT), gestión de roles y permisos, y un flujo seguro de recuperación de contraseñas.</p>
+                            <div class="technologies"><span>Node.js</span><span>Express</span><span>JWT</span><span>React</span></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>Un Socio Tecnológico, no un simple Proveedor</h2>
+                <p><strong>Innovexo Labs</strong> es un estudio de desarrollo donde la excelencia técnica y la comunicación directa son la base. Liderado por <strong>Christian Lopez Baya</strong>, combinamos años de experiencia en desarrollo full-stack con una mentalidad DevOps y un background en QA para construir soluciones que no solo funcionan, sino que perduran y escalan.</p>
+                <p>No somos una gran corporación; somos un equipo ágil de solucionadores de problemas, dedicados a entender tus desafíos de negocio y a traducirlos en resultados tecnológicos tangibles.</p>
+            </div>
+        </section>
+
+        <!-- ====================================================== -->
+        <!-- ============ CREDENCIALES Y CONFIANZA ================ -->
+        <!-- ====================================================== -->
+        <section id="credentials" class="credentials-section">
+            <div class="container">
+                <h3 class="section-subtitle">Credenciales y Confianza</h3>
+                <p class="credentials-text">
+                    Nuestra práctica técnica está validada por certificaciones clave de la industria. Este compromiso con los estándares de calidad, seguridad en la nube y metodologías de testing nos permite construir software robusto y fiable.
+                </p>
+                <div class="logos-container">
+                    <!-- Archivos de logos actualizados a .png -->
+                    <img src="assets/aws.png" alt="Logo de AWS Certified Developer Associate">
+                    <img src="assets/istqb.png" alt="Logo de ISTQB Certified Tester">
+                </div>
+                <p class="micro-copy">Un enfoque en la calidad, la seguridad y la escalabilidad.</p>
+            </div>
+        </section>
+        <!-- ====================================================== -->        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>¿Listo para Construir tu Proyecto?</h2>
+                <p>Si tienes una idea o un desafío técnico, hablemos. Agenda una llamada sin compromiso para explorar cómo podemos trabajar juntos.</p>
+                <a href="mailto:clopezbaya@gmail.com" class="cta-button">clopezbaya@gmail.com</a>
+                <div class="contact-microcopy">
+                    O contáctame directamente por <a href="https://wa.me/59174822704" target="_blank">WhatsApp</a>. <br> Agendemos una llamada de 15 minutos.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <img src="logo.svg" alt="Innovexo Labs Logo">
+                <p>&copy; 2026 Innovexo Labs. <br> Todos los derechos reservados.</p>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/clopezbaya" target="_blank" title="GitHub">GitHub</a>
+                <a href="https://linkedin.com/in/christian-lopez-baya-587394125" target="_blank" title="LinkedIn">LinkedIn</a>
+                <a href="mailto:clopezbaya@gmail.com" title="Email">Email</a>
+                <a href="https://wa.me/59174822704" target="_blank" title="WhatsApp">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
