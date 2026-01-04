@@ -22,3 +22,22 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// --- Lógica del Menú de Hamburguesa ---
+const hamburgerBtn = document.getElementById('hamburger-btn');
+const mainHeader = document.querySelector('.main-header');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+// Abrir/cerrar menú con el botón
+hamburgerBtn.addEventListener('click', () => {
+    mainHeader.classList.toggle('nav-open');
+});
+
+// Cerrar el menú al hacer clic en un enlace
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        if (mainHeader.classList.contains('nav-open')) {
+            mainHeader.classList.remove('nav-open');
+        }
+    });
+});
