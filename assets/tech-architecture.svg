@@ -1,0 +1,59 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop offset="0%" style="stop-color:rgb(79, 70, 229, 0.3);stop-opacity:1" />
+            <stop offset="100%" style="stop-color:rgb(17, 24, 39, 0);stop-opacity:1" />
+        </radialGradient>
+        <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#3b82f6" />
+            <stop offset="100%" stop-color="#8b5cf6" />
+        </linearGradient>
+    </defs>
+    <!-- Background -->
+    <rect width="800" height="600" fill="#111827"/>
+    <rect width="800" height="600" fill="url(#grad1)"/>
+
+    <!-- Grid lines -->
+    <g opacity="0.2">
+        <path d="M400 0V600" stroke="#4b5563" stroke-width="0.5"/>
+        <path d="M0 300H800" stroke="#4b5563" stroke-width="0.5"/>
+        <path d="M100 0L700 600" stroke="#4b5563" stroke-width="0.5" stroke-dasharray="4 4"/>
+        <path d="M700 0L100 600" stroke="#4b5563" stroke-width="0.5" stroke-dasharray="4 4"/>
+    </g>
+
+    <!-- Core Node -->
+    <circle cx="400" cy="300" r="40" fill="#1F2937" stroke="url(#grad2)" stroke-width="2"/>
+    <text x="400" y="305" font-family="Poppins, sans-serif" font-size="14" fill="#f9fafb" text-anchor="middle" font-weight="600">CORE</text>
+
+    <!-- Satellite Nodes -->
+    <g>
+        <circle cx="250" cy="150" r="25" fill="#1F2937" stroke="#3b82f6" stroke-width="1.5"/>
+        <text x="250" y="155" font-family="Roboto, sans-serif" font-size="12" fill="#d1d5db" text-anchor="middle">API</text>
+        <path d="M365,280 Q300,250 270,165" stroke="#3b82f6" stroke-width="1.5" fill="none" opacity="0.7"/>
+    </g>
+    <g>
+        <circle cx="550" cy="150" r="25" fill="#1F2937" stroke="#3b82f6" stroke-width="1.5"/>
+        <text x="550" y="155" font-family="Roboto, sans-serif" font-size="12" fill="#d1d5db" text-anchor="middle">AUTH</text>
+        <path d="M435,280 Q500,250 530,165" stroke="#3b82f6" stroke-width="1.5" fill="none" opacity="0.7"/>
+    </g>
+    <g>
+        <circle cx="250" cy="450" r="25" fill="#1F2937" stroke="#8b5cf6" stroke-width="1.5"/>
+        <text x="250" y="455" font-family="Roboto, sans-serif" font-size="12" fill="#d1d5db" text-anchor="middle">DB</text>
+        <path d="M365,320 Q300,350 270,435" stroke="#8b5cf6" stroke-width="1.5" fill="none" opacity="0.7"/>
+    </g>
+    <g>
+        <circle cx="550" cy="450" r="25" fill="#1F2937" stroke="#8b5cf6" stroke-width="1.5"/>
+        <text x="550" y="455" font-family="Roboto, sans-serif" font-size="12" fill="#d1d5db" text-anchor="middle">CACHE</text>
+        <path d="M435,320 Q500,350 530,435" stroke="#8b5cf6" stroke-width="1.5" fill="none" opacity="0.7"/>
+    </g>
+     <g>
+        <circle cx="150" cy="300" r="25" fill="#1F2937" stroke="#10b981" stroke-width="1.5"/>
+        <text x="150" y="305" font-family="Roboto, sans-serif" font-size="12" fill="#d1d5db" text-anchor="middle">WEB</text>
+        <path d="M360,300 H 175" stroke="#10b981" stroke-width="1.5" fill="none" opacity="0.7"/>
+    </g>
+    <g>
+        <circle cx="650" cy="300" r="25" fill="#1F2937" stroke="#ef4444" stroke-width="1.5"/>
+        <text x="650" y="305" font-family="Roboto, sans-serif" font-size="12" fill="#d1d5db" text-anchor="middle">CDN</text>
+        <path d="M440,300 H 625" stroke="#ef4444" stroke-width="1.5" fill="none" opacity="0.7"/>
+    </g>
+</svg>

@@ -231,14 +231,36 @@ section { padding: 6rem 0; }
 
 
 /* --- ABOUT SECTION --- */
-
 .about-section {
     background-color: var(--bg-light);
 }
-.about-section .container {
-    max-width: 800px;
-    text-align: center;
+
+.about-layout {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 columna por defecto para mobile */
+    gap: 3rem;
+    align-items: center;
 }
+
+@media (min-width: 768px) {
+    .about-layout {
+        grid-template-columns: 1fr 1fr; /* 2 columnas para desktop */
+    }
+}
+
+.about-text-content h2 {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.about-image-content img {
+    width: 100%;
+    max-width: 450px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
 
 .contact-section .container {
     max-width: 700px;
@@ -306,32 +328,50 @@ section { padding: 6rem 0; }
 
 /* --- FOOTER --- */
 .main-footer {
-    background-color: var(--bg-light);
-    padding: 3rem 0;
+    background-color: var(--bg-dark);
+    padding: 4rem 0 2rem;
     border-top: 1px solid #333;
 }
+
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
+    gap: 2.5rem; /* Espacio entre logo, links y copyright */
 }
-.footer-logo {
+
+.footer-logo img {
+    height: 55px;
+    opacity: 0.9;
+}
+
+.social-links {
     display: flex;
-    align-items: center;
-    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 2rem; /* Espacio vertical y horizontal */
 }
-.footer-logo img { height: 55px; }
-.footer-logo p { font-size: 0.9rem; margin: 0; color: var(--text-gray); }
 
 .social-links a {
     color: var(--text-gray);
-    margin-left: 1.5rem;
+    margin: 0;
     transition: color 0.3s ease;
     font-weight: 700;
 }
-.social-links a:hover { color: var(--text-light); }
+
+.social-links a:hover {
+    color: var(--text-light);
+}
+
+.footer-copyright {
+    margin-top: 1rem; /* Espacio final */
+}
+
+.footer-copyright p {
+    font-size: 0.85rem;
+    color: #6b7280; /* Un gris más oscuro para menor jerarquía */
+    margin: 0;
+}
 
 /* --- RESPONSIVE DESIGN --- */
 /* --- HAMBURGER MENU & MOBILE NAV --- */
@@ -426,12 +466,5 @@ section { padding: 6rem 0; }
     
     section { padding: 4rem 0; }
     
-    .footer-content {
-        flex-direction: column;
-        gap: 2rem;
-        text-align: center;
-    }
-    .footer-logo { flex-direction: column; }
-    .social-links { text-align: center; }
     .social-links a { margin: 0 0.75rem; }
 }
