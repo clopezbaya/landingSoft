@@ -1,10 +1,10 @@
 /* --- VARIABLES Y ESTILOS GLOBALES --- */
 :root {
-    --bg-dark: #1a1a1a;
-    --bg-light: #252525;
-    --text-light: #f5f5f5;
-    --text-gray: #aaaaaa;
-    --accent-blue: #00AEFF;
+    --bg-dark: #0A0A0A; /* Negro casi puro */
+    --bg-light: #1C1C1E; /* Gris plomo oscuro para fondos secundarios */
+    --text-light: #F5F7FA; /* Un blanco ligeramente más suave */
+    --text-gray: #A0AEC0; /* Un gris azulado para texto secundario */
+    --accent-blue: #007BFF; /* Azul eléctrico */
     --font-headings: 'Poppins', sans-serif;
     --font-body: 'Roboto', sans-serif;
 }
@@ -98,7 +98,18 @@ section { padding: 6rem 0; }
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 174, 255, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3); /* Updated shadow color to match new accent */
+}
+
+.cta-button.secondary {
+    background-color: transparent;
+    color: var(--accent-blue) !important;
+    border: 2px solid var(--accent-blue);
+}
+
+.cta-button.secondary:hover {
+    background-color: var(--accent-blue);
+    color: var(--bg-dark) !important;
 }
 
 /* --- SECCIONES --- */
@@ -113,6 +124,12 @@ section { padding: 6rem 0; }
     max-width: 600px;
     margin: 1.5rem auto 2.5rem;
 }
+.hero-cta-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
 
 .services-section { background-color: var(--bg-light); }
 .services-grid {
@@ -124,25 +141,56 @@ section { padding: 6rem 0; }
     background-color: var(--bg-dark);
     padding: 2.5rem 2rem;
     border-radius: 8px;
-    border: 1px solid transparent;
-    transition: border-color 0.3s ease;
-    text-align: center; /* Centra el texto dentro de la tarjeta */
+    border: 1px solid var(--bg-light); 
+    transition: border-color 0.3s ease, transform 0.3s ease;
+    text-align: left; 
 }
-.service-card:hover { border-color: var(--accent-blue); }
-.service-card .benefit {
-    display: block;
-    margin-top: 1.5rem;
-    color: var(--accent-blue);
-    font-weight: 700;
-    font-size: 0.9rem;
+.service-card:hover { 
+    transform: translateY(-5px);
+    border-color: var(--accent-blue); 
 }
-.support-mention {
-    text-align: center;
-    margin-top: 4rem;
-    padding: 1rem;
-    background-color: var(--bg-dark);
+.service-card h3 {
+    color: var(--text-light);
+}
+
+/* --- HOW WE WORK SECTION --- */
+.how-we-work-section {
+    padding: 6rem 0 3rem 0; /* Reduced padding-bottom */
+}
+.process-steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    counter-reset: step-counter;
+}
+.process-step {
+    background-color: var(--bg-light);
+    padding: 2rem;
     border-radius: 8px;
-    border-left: 4px solid var(--accent-blue);
+    text-align: center;
+    flex-basis: 280px; /* An intermediate base width for flex items */
+    flex-grow: 1;
+}
+.process-step::before {
+    counter-increment: step-counter;
+    content: counter(step-counter);
+    display: block;
+    margin: 0 auto 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-blue);
+    background-color: var(--bg-dark);
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+}
+.process-step h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
 }
 
 .portfolio-grid {
